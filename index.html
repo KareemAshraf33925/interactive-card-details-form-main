@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive-card-details-form-main</title>
+    <!-- link-normalize -->
+     <link rel="stylesheet" href="css/Normalize.css">
+     <!-- link-css -->
+      <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- start-interactivecard -->
+     <main>
+      <div class="container">
+        <div class="interactivecard">
+            <picture>
+              <source srcset="images/bg-main-desktop.png" media="(max-width:700px)">
+              <img src="images/bg-main-mobile.png" alt="bg-main-mobile">
+            </picture>
+          <div class="card-bank">
+            <div class="front-card">
+              <span class="bg-circle"></span>
+              <span class="small-circle"></span>
+              <p class="holder-number">0000 0000 0000 0000</p>
+              <p class="holder-name">Jane Appleseed</p>
+              <div class="holder-expdate">
+                <span class="holder-mm">00</span>
+                <span class="bar">/</span>
+                <span class="holder-yy">00</span>
+              </div>
+            </div>
+            <div class="back-card">
+              <span class="holder-cvc">000</span>
+            </div>
+          </div>
+          <div class="card">
+          <form id="form">
+            <label for="name" class="namecard">Cardholder Name</label>
+            <input type="text" id="name" placeholder="e.g. Jane Appleseed">
+            <span class="error-name"></span>
+            <label for="number" class="numbercard"> Card Number</label>
+            <input type="text" id="number" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+            <span class="error-number"></span>
+            <div class="date">
+              <div class="exp">
+            <label for="mm" class="exp-date"> Exp. Date (MM/YY)</label>
+            <input type="text"  id="mm" placeholder="MM" maxlength="2">
+            <input type="text" id="yy" placeholder="YY" maxlength="2">
+            <span class="error-exp"></span>
+            </div>
+            <div class="cvc">
+            <label for="cv" class="vc">CVC</label>
+            <input type="text" id="cv" placeholder=" e.g. 123" maxlength="3">
+            <span class="error-cv"></span>
+            </div>
+            </div>
+            <button id="submit">Confirm</button>
+          </form>
+          <div class="complete">
+            <img src="images/icon-complete.svg" alt="icon-complete" class="icon-complete">
+            <h2>Thank you!</h2>
+            <p>We've added your card details</p>
+            <button class="continue"> Continue </button>
+          </div>
+          </div>
+        </div>
+      </div>
+     </main>
+     <!-- end-interactivecard -->
+    <!-- script-link -->
+     <script src="js/main.js"></script>
+</body>
+</html>

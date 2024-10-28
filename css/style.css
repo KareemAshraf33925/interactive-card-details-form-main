@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Space Grotesk", sans-serif;
+}
+:root{
+    --Lineargradientactiveinputborder: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --Redinputerrors: hsl(0, 100%, 66%);
+    --White: hsl(0, 0%, 100%);
+    --Lightgrayishviolet: hsl(270, 3%, 87%);
+    --Darkgrayishviolet: hsl(279, 6%, 55%);
+    --Verydarkviolet: hsl(278, 68%, 11%);
+}
+main{
+    height: 100vh;
+}
+main .container .interactivecard{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 150px;
+}
+main .container .interactivecard picture {
+    height: 100%;
+}
+main .container .interactivecard picture img{
+    height: 644px;
+    width: 400px;
+}
+main .container .interactivecard .card-bank .front-card{
+    background: url(../images/bg-card-front.png);
+    background-position: center/center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 340px;
+    height: 200px;
+    border-radius: 10px;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+main .container .interactivecard .card-bank .front-card .bg-circle{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--White);
+    margin: 30px 0 0 30px;
+}
+main .container .interactivecard .card-bank .front-card .small-circle{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+    margin: 0 0 6px 10px;
+}
+main .container .interactivecard .card-bank .front-card .holder-number{
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--White);
+    margin: 60px 0 0 40px;
+}
+main .container .interactivecard .card-bank .front-card .holder-name{
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--White);
+    margin: 20px 0 0 40px;
+    text-transform: uppercase;
+}
+main .container .interactivecard .card-bank .front-card .holder-expdate{
+    display: inline-block;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--White);
+    position: relative;
+    left: 280px;
+    bottom: 16px;
+}
+main .container .interactivecard .card-bank .back-card{
+    background: url(../images/bg-card-back.png);
+    background-position: center/center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 340px;
+    height: 200px;
+    border-radius: 10px;
+    position: absolute;
+    top: 400px;
+    left: 200px;
+}
+main .container .interactivecard .card-bank .back-card .holder-cvc{
+    display: block;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--White);
+    float: right;
+    margin: 93px 20px 0 0;
+}
+main .container .interactivecard .card { 
+    position: relative;
+}
+main .container .interactivecard .card #form{
+    transition: all 0.6s;
+}
+main .container .interactivecard .card #form .namecard{
+    display: inline-block;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+}
+main .container .interactivecard .card #form #name{
+    display: block;
+    padding: 10px 10px;
+    width: 370px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border: 1px solid var(--Darkgrayishviolet);
+    opacity: 0.6;
+    margin: 10px 0 10px 0;
+}
+main .container .interactivecard .card #form .error-name{
+    display: block;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    color: var(--Redinputerrors);
+    font-size: 12px;
+    margin: 10px 0;
+}
+main .container .interactivecard .card #form .numbercard{
+    display: block;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+}
+main .container .interactivecard .card #form #number{
+    display: block;
+    padding: 10px 10px;
+    width: 370px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border: 1px solid var(--Darkgrayishviolet);
+    opacity: 0.6;
+    margin: 10px 0 20px 0;
+}
+main .container .interactivecard .card #form .error-number{
+    display: block;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    color: var(--Redinputerrors);
+    font-size: 12px;
+    margin: 10px 0;
+}
+main .container .interactivecard .card #form .date{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 40px;
+}
+main .container .interactivecard .card #form .date .exp .exp-date{
+    display: block;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+}
+main .container .interactivecard .card #form .date .exp #mm{
+    display: inline-block;
+    padding: 10px 10px;
+    width: 80px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border: 1px solid var(--Darkgrayishviolet);
+    opacity: 0.6;
+    margin: 10px 0 20px 0;
+}
+main .container .interactivecard .card #form .date .exp #yy{
+    display: inline-block;
+    padding: 10px 10px;
+    width: 80px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border: 1px solid var(--Darkgrayishviolet);
+    opacity: 0.6;
+    margin: 10px 0 20px 20px;
+}
+main .container .interactivecard .card #form .date .exp .error-exp{
+    display: block;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    color: var(--Redinputerrors);
+    font-size: 12px;
+    margin: 0 0 10px 0;
+}
+main .container .interactivecard .card #form .date .cvc .vc{
+    display: inline-block;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+}
+main .container .interactivecard .card #form .date .cvc #cv{
+    display: block;
+    padding: 10px 10px;
+    width: 150px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border: 1px solid var(--Darkgrayishviolet);
+    opacity: 0.6;
+    margin: 10px 0 30px 0;
+}
+main .container .interactivecard .card #form .date .cvc .error-cv{
+    display: block;
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    color: var(--Redinputerrors);
+    font-size: 12px;
+    margin: 0 0 10px 0;
+}
+main .container .interactivecard .card #form #submit{
+    display: block;
+    padding: 13px 40px;
+    background-color: var(--Verydarkviolet);
+    color: var(--White);
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 380px;
+    cursor: pointer;
+}
+main .container .interactivecard .card .complete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+    position: absolute;
+    top: -200px;
+    display: none;
+    transition: all 0.6s;
+}
+main .container .interactivecard .card .complete h2{
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    text-transform: uppercase;
+}
+main .container .interactivecard .card .complete p{
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    color: var(--Darkgrayishviolet);
+}
+main .container .interactivecard .card .complete .continue{
+    display: block;
+    padding: 13px 40px;
+    background-color: var(--Verydarkviolet);
+    color: var(--White);
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 380px;
+    cursor: pointer;
+}
+@media(max-width:1024px){
+    main .container .interactivecard {
+        gap: 100px;
+      }
+}
+@media(max-width:768px){
+    main .container .interactivecard picture img {
+        width: 255px;
+      }
+      main .container .interactivecard .card-bank .front-card {
+        width: 300px;
+        left: 70px;
+      }
+      main .container .interactivecard .card-bank .front-card .holder-expdate {
+        left: 240px;
+      }
+      main .container .interactivecard .card-bank .back-card {
+        width: 300px;
+        left:100px;
+      }
+      main .container .interactivecard .card #form #name {
+        width: 275px;
+      }
+      main .container .interactivecard .card #form #number {
+        width: 275px;
+      }
+      main .container .interactivecard .card #form .date {
+        justify-content: flex-start;
+        gap: 15px;
+      }
+      main .container .interactivecard .card #form .date .cvc #cv {
+        width: 96px;
+      }
+      main .container .interactivecard .card #form .date .exp #mm {
+        width: 70px;
+      
+      }
+      main .container .interactivecard .card #form .date .exp #yy {
+        width: 70px;
+      
+      }
+      main .container .interactivecard .card #form #submit {
+        width: 280px;
+      }
+      main .container .interactivecard .card .complete .continue {
+        width: 280px;
+      }
+}
+@media(max-width:480px){
+    main .container .interactivecard {
+        flex-direction: column;
+      }
+      main .container .interactivecard picture img {
+        width: 480px;
+        height: 300px;
+      }
+      main .container .interactivecard .card-bank .back-card {
+        width: 358px;
+        left: 100px;
+        top: 54px;
+      }
+      main .container .interactivecard .card-bank .back-card .holder-cvc {
+        margin: 93px 40px 0 0;
+      }
+      main .container .interactivecard .card-bank .front-card {
+        width: 358px;
+        left: 35px;
+        z-index: 1;
+        top: 167px;
+      }
+      main .container .interactivecard .card .complete {
+        margin-top: 134px;
+        right: -149px;
+      }
+}
+@media(max-width:375px){
+    main .container .interactivecard {
+        gap: 45px;
+    }
+    main .container .interactivecard picture img {
+        width: 375px;
+      }
+      main .container .interactivecard .card-bank .back-card {
+        width: 312px;
+        left: 45px;
+        top: 54px;
+        background-size: contain;
+      }
+      main .container .interactivecard .card-bank .back-card .holder-cvc {
+        margin: 78px 40px 0 0;
+      }
+      main .container .interactivecard .card-bank .front-card {
+        width: 312px;
+        left: 10px;
+        background-size: contain;
+      }
+      main .container .interactivecard .card-bank .front-card .holder-number {
+        margin: 45px 0 0 40px;
+      }
+      main .container .interactivecard .card-bank .front-card .holder-name {
+        margin: 10px 0 0 40px;
+      }
+      main .container .interactivecard .card .complete {
+        margin-top: 226px;
+      }
+}
+@media(max-width:320px){
+    main .container .interactivecard picture img {
+        width: 320px;
+      }
+      main .container .interactivecard .card-bank .back-card {
+        width: 262px;
+      }
+      main .container .interactivecard .card-bank .back-card .holder-cvc {
+        margin: 65px 40px 0 0;
+      }
+      main .container .interactivecard .card-bank .front-card {
+        width: 262px;
+        left: 10px;
+        background-size: contain;
+      }
+      main .container .interactivecard .card-bank .front-card .holder-number {
+        margin: 20px 0 0 40px;
+      }
+      main .container .interactivecard .card-bank .front-card .holder-expdate {
+        left: 215px;
+      }
+}
+@media(max-width:240px){
+    main .container .interactivecard picture img {
+        width: 240px;
+        height: 200px;
+      }
+      main .container .interactivecard .card-bank .back-card {
+        width: 200px;
+        left: 25px;
+      }
+      main .container .interactivecard .card-bank .back-card .holder-cvc {
+        margin: 47px 40px 0 0;
+      }
+      main .container .interactivecard .card-bank .front-card {
+        width: 200px;
+        top: 116px;
+      }
+      main .container .interactivecard .card-bank .front-card .bg-circle {
+        width: 20px;
+        height: 20px;
+        margin: 10px 0 0 15px;
+      }
+      main .container .interactivecard .card-bank .front-card .small-circle {
+        width: 10px;
+        height: 10px;
+        margin: 0 0 4px 10px;
+      }
+      main .container .interactivecard .card-bank .front-card .holder-number {
+        margin: 20px 0 0 15px;
+        font-size: 12px;
+      }
+      main .container .interactivecard .card-bank .front-card .holder-name {
+        margin: 10px 0 0 15px;
+        font-size: 10px;
+      }
+      main .container .interactivecard .card-bank .front-card .holder-expdate {
+        font-size: 10px;
+        left: 145px;
+      }
+      main .container .interactivecard .card #form {
+       text-align: center;
+      } 
+      main .container .interactivecard .card #form #name {
+        width: 225px;
+        margin-left: 10px;
+      }    
+      main .container .interactivecard .card #form #number {
+        width: 225px;
+        margin-left: 10px;
+      } 
+      main .container .interactivecard .card #form .date .cvc #cv {
+        width: 72px;
+      }
+      main .container .interactivecard .card #form .date .exp .exp-date {
+        font-size: 12px;
+      }
+      main .container .interactivecard .card #form .date .cvc .vc {
+        font-size: 12px;
+      }
+      main .container .interactivecard .card #form .date .exp #mm {
+        width: 58px;
+        margin-left: 8px;
+      }
+      main .container .interactivecard .card #form .date .exp #yy {
+        width: 58px;
+        margin: 10px 0 20px 4px;
+      }
+      main .container .interactivecard .card #form #submit {
+        width: 230px;
+        margin-left: 3px;
+      }
+      main .container .interactivecard .card .complete p {
+        font-size: 13px;
+      }
+      main .container .interactivecard .card .complete .continue {
+        width: 230px;
+      }
+      main .container .interactivecard .card .complete {
+        right: -115px;
+      }
+      main .container .interactivecard .card #form .date {
+        gap: 5px;
+      }
+}
